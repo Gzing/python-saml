@@ -214,13 +214,13 @@ class OneLogin_Saml2_Response(object):
                 #     )
 
                 # Checks the issuers
-                issuers = self.get_issuers()
-                for issuer in issuers:
-                    if issuer is None or issuer != idp_entity_id:
-                        raise OneLogin_Saml2_ValidationError(
-                            'Invalid issuer in the Assertion/Response',
-                            OneLogin_Saml2_ValidationError.WRONG_ISSUER
-                        )
+                # issuers = self.get_issuers()
+                # for issuer in issuers:
+                #     if issuer is None or issuer != idp_entity_id:
+                #         raise OneLogin_Saml2_ValidationError(
+                #             'Invalid issuer in the Assertion/Response',
+                #             OneLogin_Saml2_ValidationError.WRONG_ISSUER
+                #         )
 
                 # Checks the session Expiration
                 session_expiration = self.get_session_not_on_or_after()
